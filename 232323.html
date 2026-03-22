@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica 9 - Maquetacio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Favicon de la pestanya -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23252525'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' fill='white' font-size='36'%3ER%3C/text%3E%3C/svg%3E" />
+    <!-- Icones per al footer -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Menu fix superior -->
+    <header class="top-menu" id="inici">
+      <nav>
+        <ul class="top-menu-list">
+          <li><a href="#sobre">Nosaltres</a></li>
+          <li><a href="#carta">Carta</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Boto fix inferior dret -->
+    <a class="reserve-float" href="#reserva">Reservar</a>
+
+    <!-- Capcalera amb imatge ampla i text a sobre a l'esquerra -->
+    <section class="hero" id="hero">
+      <img src="https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Interior d'un restaurant elegant" />
+      <article class="hero-box">
+        <h1>Restaurant els coberts</h1>
+        <p>Gaudeix de la cuina de temporada amb <strong>Coberts</strong> i plats especials.</p>
+      </article>
+    </section>
+
+    <main class="wireframe">
+
+      <!-- Seccio sobre nosaltres -->
+      <section class="section" id="sobre">
+        <h2>Sobre nosaltres</h2>
+        <div class="about-grid">
+          <img class="about-image" src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Taules preparades dins del restaurant" />
+          <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+          <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <img class="about-image" src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Equip de cuina treballant" />
+        </div>
+      </section>
+
+      <!-- Seccio carta; tot menys el titol va dins d'un unic grid -->
+      <section class="section" id="carta">
+        <h2>Carta</h2>
+        <div class="carta-grid">
+          <div class="carta-menu-title">Menu</div>
+
+          <div class="menu-tag menu-tag-1">Menu 1</div>
+          <article class="menu-content menu-content-1">
+            <h3>Contingut</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="dish-row">
+              <figure class="dish-card">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plat de pasta" />
+                <figcaption>pasta</figcaption>
+              </figure>
+              <figure class="dish-card">
+                <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Entrants variats" />
+                <figcaption>entrants</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <div class="menu-tag menu-tag-2">Menu 2</div>
+          <article class="menu-content menu-content-2">
+            <h3>Contingut</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="dish-row">
+              <figure class="dish-card">
+                <img src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Amanida fresca" />
+                <figcaption>amanida</figcaption>
+              </figure>
+              <figure class="dish-card">
+                <img src="https://images.pexels.com/photos/3763847/pexels-photo-3763847.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plat de peix" />
+                <figcaption>peix</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Galeria en flex -->
+      <section class="section" id="galeria">
+        <h2>Galeria d'imatges</h2>
+        <div class="gallery-flex">
+          <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Plat gourmet" />
+          <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sala del restaurant" />
+          <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Taula amb copes" />
+          <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Postres" />
+          <img src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Plat de carn" />
+          <img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cuina oberta" />
+          <img src="https://images.pexels.com/photos/5638732/pexels-photo-5638732.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cambrer servint" />
+          <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Aperitiu" />
+        </div>
+      </section>
+
+      <!-- Formulari de reserva -->
+      <section class="section" id="reserva">
+        <h2>Reserva</h2>
+        <form class="reserve-form" action="#" method="post">
+          <div>
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" required />
+          </div>
+          <div>
+            <label for="persones">Numero de persones</label>
+            <input id="persones" name="persones" type="number" min="1" required />
+          </div>
+          <div>
+            <label for="data">Data</label>
+            <input id="data" name="data" type="date" required />
+          </div>
+          <div>
+            <label for="hora">Hora</label>
+            <input id="hora" name="hora" type="time" required />
+          </div>
+          <div class="reserve-desc">
+            <label for="desc">Descripcio</label>
+            <textarea id="desc" name="desc" rows="5"></textarea>
+          </div>
+          <button type="submit">Reservar</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer amb logotip a l'esquerra  -->
+    <footer class="page-footer">
+      <div class="footer-logo">R</div>
+      <div class="footer-left">
+        <span class="material-icons" aria-hidden="true">mail</span>
+        <span>exemple@exemple.com</span>
+        <span class="material-icons" aria-hidden="true">phone</span>
+        <span>999999999</span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,489 @@
+﻿/* Practica 9 - Estils principals */
+/* Variables CSS */
+:root {
+  --page-bg: #ece9e2;
+  --panel-bg: #fffdf8;
+  --line: #4a4a4a;
+  --muted: #5c5c5c;
+  --hover: #1b1b1b;
+  --accent: #d14a2f;
+  --card: #f6f2ea;
+  --ink-soft: #343434;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", Arial, sans-serif;
+  color: #222;
+  background: var(--page-bg);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Menu fix superior amb flex */
+.top-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-bottom: 0.06rem solid var(--line);
+  background: var(--panel-bg);
+  padding: 0.55rem 1rem;
+}
+
+.top-menu nav {
+  width: 95%;
+  max-width: 86rem;
+  margin: 0 auto;
+}
+
+.top-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.45rem;
+}
+
+.top-menu-list a {
+  display: inline-block;
+  border: 0.06rem solid var(--line);
+  text-decoration: none;
+  color: var(--ink-soft);
+  background: #f7f3ec;
+  padding: 0.45rem 1.45rem;
+  font-size: 1.2rem;
+}
+
+.top-menu-list a:hover,
+.top-menu-list a:focus {
+  text-decoration: underline;
+  background: var(--hover);
+  color: #fff;
+}
+
+/* Boto reservar fix a baix a la dreta */
+.reserve-float {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 90;
+  border: 0.06rem solid #173763;
+  background: #173763;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.05rem;
+}
+
+.reserve-float:hover,
+.reserve-float:focus {
+  background: #152e55;
+}
+
+/* Capcalera principal (100% ample) */
+.hero {
+  position: relative;
+  margin-top: 4.1rem;
+  border-top: 0.06rem solid var(--line);
+  border-bottom: 0.06rem solid var(--line);
+  min-height: 18rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
+
+.hero-box {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 85%;
+  max-width: 26rem;
+  border: 0.06rem solid var(--line);
+  background: rgba(23, 23, 23, 0.65);
+  padding: 0.75rem;
+  color: #fff;
+}
+
+.hero-box h1 {
+  margin: 0 0 0.3rem;
+  font-size: 2rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.hero-box p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+/* Caixa central del mockup */
+.wireframe {
+  width: 95%;
+  max-width: 86rem;
+  margin: 1.2rem auto 1.5rem;
+  border: 0.12rem solid var(--line);
+  background: #f3eee5;
+  padding: 1.1rem;
+}
+
+.section {
+  margin-top: 1.6rem;
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  border-left: 0.28rem solid var(--accent);
+  padding-left: 0.55rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+/* Sobre nosaltres */
+.about-grid {
+  display: grid;
+  grid-template-columns: 10rem 1fr 10rem;
+  grid-template-areas:
+    "img1 txt1 txt1"
+    "txt2 txt2 img2";
+  gap: 1rem;
+  align-items: center;
+  max-width: 72rem;
+}
+
+.about-grid .about-image:nth-child(1) {
+  grid-area: img1;
+}
+
+.about-grid .about-text:nth-child(2) {
+  grid-area: txt1;
+}
+
+.about-grid .about-text:nth-child(3) {
+  grid-area: txt2;
+}
+
+.about-grid .about-image:nth-child(4) {
+  grid-area: img2;
+}
+
+.about-image {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border: 0.06rem solid var(--line);
+  border-radius: 0.5rem;
+}
+
+.about-text {
+  margin: 0;
+  border: 0.06rem solid var(--line);
+  background: var(--card);
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Carta (unic grid excepte titol de seccio) */
+.carta-grid {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  grid-template-areas:
+    "title title"
+    "tag1 content1"
+    "tag2 content2";
+  gap: 0.55rem;
+  border: 0.06rem solid var(--line);
+  background: #f6f2e9;
+  padding: 1rem;
+}
+
+.carta-menu-title {
+  grid-area: title;
+  border: 0.06rem solid var(--line);
+  text-align: center;
+  padding: 0.65rem;
+  font-size: 2rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.menu-tag {
+  border: 0.06rem solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: #fff;
+}
+
+.menu-tag-1 {
+  grid-area: tag1;
+}
+
+.menu-tag-2 {
+  grid-area: tag2;
+}
+
+.menu-content {
+  border: 0.06rem solid var(--line);
+  padding: 0.7rem;
+  background: #fff;
+}
+
+.menu-content-1 {
+  grid-area: content1;
+}
+
+.menu-content-2 {
+  grid-area: content2;
+}
+
+.menu-content h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.menu-content p {
+  margin: 0.3rem 0 0.8rem;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.dish-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+/* Text centrat a la part inferior de cada imatge */
+.dish-card {
+  position: relative;
+  margin: 0;
+  border: 0.06rem solid var(--line);
+  background: #fff;
+  overflow: hidden;
+}
+
+.dish-card img {
+  width: 100%;
+  height: 8.5rem;
+  object-fit: cover;
+}
+
+.dish-card figcaption {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+/* Galeria en flex */
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.gallery-flex img {
+  flex: 0 0 24%;
+  height: 7.5rem;
+  object-fit: cover;
+  border: 0.15rem solid #d7d7d7;
+}
+
+.gallery-flex img:nth-child(1),
+.gallery-flex img:nth-child(4),
+.gallery-flex img:nth-child(5),
+.gallery-flex img:nth-child(8) {
+  filter: brightness(0.72);
+}
+
+.gallery-flex img:hover,
+.gallery-flex img:focus {
+  border-color: #2f8aa4;
+  filter: brightness(0.55);
+}
+
+/* Formulari */
+.reserve-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem 1rem;
+}
+
+.reserve-form label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+}
+
+.reserve-form input,
+.reserve-form textarea {
+  width: 100%;
+  border: 0.06rem solid var(--muted);
+  padding: 0.45rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+}
+
+.reserve-form input:focus,
+.reserve-form textarea:focus {
+  outline: 0.08rem solid #2f8aa4;
+  border-color: #2f8aa4;
+}
+
+.reserve-desc {
+  grid-column: 1 / span 2;
+}
+
+.reserve-form button {
+  justify-self: end;
+  border: 0.06rem solid var(--line);
+  background: #f6f2ea;
+  font-size: 1rem;
+  padding: 0.5rem 1.4rem;
+  cursor: pointer;
+}
+
+.reserve-form button:hover {
+  background: #e8dece;
+}
+
+/* Footer */
+.page-footer {
+  width: 95%;
+  max-width: 86rem;
+  margin: 0 auto 1.2rem;
+  border: 0.12rem solid var(--line);
+  border-top: none;
+  background: #e9e2d4;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.material-icons {
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+
+.footer-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.06rem solid var(--line);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background: #f7f2e6;
+}
+
+/* Responsive basica */
+@media (max-width: 58rem) {
+  .top-menu-list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .top-menu-list a {
+    font-size: 1rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img1"
+      "txt1"
+      "img2"
+      "txt2";
+  }
+
+  .about-image {
+    width: 12rem;
+  }
+
+  .carta-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "tag1"
+      "content1"
+      "tag2"
+      "content2";
+  }
+
+  .menu-tag {
+    min-height: 3rem;
+  }
+
+  .dish-row {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-flex img {
+    flex: 0 0 49%;
+  }
+
+  .reserve-form {
+    grid-template-columns: 1fr;
+  }
+
+  .reserve-desc {
+    grid-column: auto;
+  }
+
+  .reserve-form button {
+    justify-self: start;
+  }
+
+  .footer-left {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 36rem) {
+  .gallery-flex img {
+    flex: 0 0 100%;
+  }
+}
